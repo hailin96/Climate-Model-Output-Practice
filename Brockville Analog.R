@@ -26,6 +26,9 @@ june_raster <- avgtemp[[june_indices]] #return only the raster layers for 06 mon
 
 june_dates <- dates[june_indices] #return a list of 06 month from each year
 
+futurejune <- which(format(june_dates, "%Y") %in% 2050:2060) #convert years to numeric and see if it is bw 2050 and 2060.
+
+
 #Locate Brockville by Downscaling from Global Scale
 
 #Brockville is missing from CMIP6, so let's create a box around the Ottawa area.
