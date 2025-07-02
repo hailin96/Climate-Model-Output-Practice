@@ -149,6 +149,7 @@ plot(st_geometry(canada_polar_2024), add=TRUE, border = "yellow")
 plot(canada_transect, col = "red", add=TRUE)
 
 #Let's extract sea ice concentration values from the line
+canada_transect$id <- 1:nrow(canada_transect)
 seaiceconc_2024 <- terra::extract(seaice_2024, canada_transect)
 seaiceconc_2024 <- cbind(canada_transect, seaiceconc_2024)
 head(seaiceconc_2024)
